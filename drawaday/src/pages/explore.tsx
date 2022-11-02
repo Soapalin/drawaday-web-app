@@ -12,9 +12,9 @@ const Explore: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className="container mx-auto flex min-h-screen flex-col items-center justify-center p-4">
-        hello
+        Explore
       </main>
-      <BottomNavigation></BottomNavigation>
+      <BottomNavigation currentPage="Explore"></BottomNavigation>
     </>
   );
 };

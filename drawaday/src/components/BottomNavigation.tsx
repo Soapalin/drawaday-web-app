@@ -1,8 +1,14 @@
-import { type NextPage } from "next";
-import Head from "next/head";
 import Link from "next/link";
 
-const BottomNavigation: NextPage = () => {
+interface CurrentPage {
+  currentPage: string;
+  url?: string;
+}
+
+function BottomNavigation(props: CurrentPage) {
+  if (!props.currentPage) {
+    props.currentPage = "Home";
+  }
   return (
     <footer className="flex h-screen w-full">
       <section className="fixed inset-x-0 bottom-0 z-10 block w-full border-t-2 border-solid border-indigo-600 bg-white ">
@@ -88,6 +94,6 @@ const BottomNavigation: NextPage = () => {
       </section>
     </footer>
   );
-};
+}
 
 export default BottomNavigation;

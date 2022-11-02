@@ -14,7 +14,7 @@ const Upload: NextPage = () => {
       <main className="container mx-auto flex min-h-screen flex-col items-center justify-center p-4">
         Upload
       </main>
-      <BottomNavigation></BottomNavigation>
+      <BottomNavigation currentPage="Upload"></BottomNavigation>
     </>
   );
 };

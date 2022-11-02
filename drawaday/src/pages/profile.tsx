@@ -14,7 +14,7 @@ const Profile: NextPage = () => {
       <main className="container mx-auto flex min-h-screen flex-col items-center justify-center p-4">
         Profile
       </main>
-      <BottomNavigation></BottomNavigation>
+      <BottomNavigation currentPage="Profile"></BottomNavigation>
     </>
   );
 };
