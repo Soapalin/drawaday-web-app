@@ -11,7 +11,7 @@ function BottomNavigation(props: CurrentPage) {
   }
   return (
     <footer className="flex h-screen w-full">
-      <section className="fixed inset-x-0 bottom-0 z-10 block w-full border-t-2 border-solid border-indigo-600 bg-white ">
+      <section className="border-indigo-600 fixed inset-x-0 bottom-0 z-10 block w-full border-t-2 border-solid bg-background ">
         <div className="flex content-center justify-between px-2 pt-2 pb-2">
           <Link href="/">
             <div className="flex flex-col items-center text-center">
