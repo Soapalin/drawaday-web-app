@@ -1,5 +1,6 @@
 # NextAuth.js
 <br>
+This document is more focused on Google SSO.
 
 ## Prerequisites
 
@@ -71,4 +72,31 @@ export default (req, res) => NextAuth(req, res, options)
 ```
 
 
+More config options can be found in the docs - https://next-auth.js.org/configuration/options
 
+If you'd like to permanently store the users/accounts in a database, NextAuth.js makes it really easy to add sqlite for testing or various other adapters such as MySQL, Postgres, MongoDB (via TypeORM), FaunaDB, Firebase, DynamoDB, and Prisma. More information on database details can be found in their docs - https://next-auth.js.org/adapters/overview
+
+
+<br>
+
+The app needs to be wrapped in a NextAuth provider, so add the following snippet to `pages/_app.js` or create the file if it has not been done yet:
+
+```javascript
+import { Provider } from 'next-auth/client'
+
+export default function App ({ Component, pageProps }) {
+  return (
+    <Provider session={pageProps.session}>
+      <Component {...pageProps} />
+    </Provider>
+  )
+}
+```
+
+By wrapping the whole application in this provider, React Context can be used to make `useSession` hook available in any page / component in the app and share session state.
+
+
+The library includes some basic Login / Logout pages by default, so there's no need to write them. Those pages can be customised by following the instructions here - https://next-auth.js.org/configuration/pages
+
+
+## Restricting Page Access 
