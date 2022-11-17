@@ -2,8 +2,13 @@ import { type NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
 import BottomNavigation from "../components/BottomNavigation";
+import { useSession } from "next-auth/react";
 
 const Home: NextPage = () => {
+
+  // `session` will match the returned value of `callbacks.session()` from `NextAuth()`
+  const { data: session } = useSession();
+
   return (
     <>
       <Head>
