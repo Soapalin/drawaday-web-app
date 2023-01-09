@@ -100,3 +100,20 @@ The library includes some basic Login / Logout pages by default, so there's no n
 
 
 ## Restricting Page Access 
+
+
+
+# Design Decision
+
+There is two ways to handle authentication that are being considered at this point of time:
+
+- MongoDB (via email and password)
+- OAuth (most likely just Google SSO)
+
+Here is the link to the github repository about next-auth-js with typescript - https://github.com/nextauthjs/next-auth-typescript-example
+
+To go through with MongoDB, we need to create a MongoDB Atlas account and have the remote database handled there. There is a bit more to do in that aspect and a brief tutorial on how to connect MongoDB to Next.js can be found here - https://www.mongodb.com/developer/languages/javascript/nextjs-with-mongodb/
+
+Furthermore, for MongoDB to used for authentication, several steps needs to be taken - https://next-auth.js.org/adapters/mongodb
+
+For OAuth, it is needed to get clientID and clientID secret from GCP and the tutorial can be found here: 

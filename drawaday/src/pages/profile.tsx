@@ -4,6 +4,7 @@ import Link from "next/link";
 import BottomNavigation from "../components/BottomNavigation";
 
 const Profile: NextPage = () => {
+
   return (
     <>
       <Head>

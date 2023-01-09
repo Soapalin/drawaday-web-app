@@ -1,5 +1,6 @@
 import NextAuth from 'next-auth'
-import Providers from 'next-auth/providers';
+// import Providers from 'next-auth/providers'; this one is deprecated 
+import { SessionProvider } from "next-auth/react";
 
 
 export default NextAuth({
@@ -20,4 +21,3 @@ export default NextAuth({
 //   debug: false
 // }
 
-// export default (req, res) => NextAuth(req, res, options)
